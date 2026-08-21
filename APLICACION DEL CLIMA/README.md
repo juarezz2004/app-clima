@@ -19,3 +19,12 @@ Aplicación web desarrollada en Python con Flask que permite consultar el estado
 1. Clonar el repositorio:
    ```bash
    git clone [https://github.com/tu-usuario/app-clima.git](https://github.com/tu-usuario/app-clima.git)
+   Instalar las dependencias:
+
+Bash
+pip install flask requests
+Ejecutar la aplicación:
+
+Bash
+python app.py
+Abrir en el navegador: http://127.0.0.1:5000
