@@ -24,7 +24,8 @@ Aplicación web desarrollada en Python con Flask que permite consultar el estado
 Bash
 pip install flask requests
 Ejecutar la aplicación:
-
 Bash
 python app.py
+
+
 Abrir en el navegador: http://127.0.0.1:5000
