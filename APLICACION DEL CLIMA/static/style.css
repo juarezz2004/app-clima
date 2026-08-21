@@ -1,0 +1,150 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    background: #0f172a;
+    color: #f8fafc;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 480px;
+    background: #1e293b;
+    border-radius: 24px;
+    padding: 32px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    border: 1px solid #334155;
+    text-align: center;
+}
+
+h1 {
+    font-size: 28px;
+    margin-bottom: 6px;
+    color: #ffffff;
+}
+
+.subtitle {
+    color: #94a3b8;
+    font-size: 15px;
+    margin-bottom: 24px;
+}
+
+.busqueda-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 24px;
+}
+
+.busqueda-form input {
+    flex: 1;
+    padding: 14px 16px;
+    border-radius: 12px;
+    border: 1px solid #475569;
+    background: #0f172a;
+    color: #ffffff;
+    font-size: 15px;
+    outline: none;
+    transition: 0.2s;
+}
+
+.busqueda-form input:focus {
+    border-color: #38bdf8;
+}
+
+.busqueda-form button {
+    padding: 14px 20px;
+    border-radius: 12px;
+    border: none;
+    background: #0284c7;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.busqueda-form button:hover {
+    background: #0369a1;
+}
+
+.error-msg {
+    background: #451a1a;
+    color: #fca5a5;
+    border: 1px solid #7f1d1d;
+    padding: 14px;
+    border-radius: 12px;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.clima-card {
+    background: #0f172a;
+    border-radius: 20px;
+    padding: 28px;
+    border: 1px solid #334155;
+    animation: fadeIn 0.3s ease;
+}
+
+.clima-emoji {
+    font-size: 72px;
+    line-height: 1;
+    margin-bottom: 12px;
+}
+
+.clima-temp {
+    font-size: 56px;
+    font-weight: bold;
+    color: #ffffff;
+    line-height: 1;
+    margin-bottom: 8px;
+}
+
+.clima-condicion {
+    font-size: 18px;
+    color: #38bdf8;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.clima-ubicacion {
+    font-size: 20px;
+    font-weight: bold;
+    color: #f1f5f9;
+    margin-bottom: 16px;
+}
+
+.clima-detalles {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 16px;
+    border-top: 1px solid #334155;
+    color: #94a3b8;
+    font-size: 14px;
+}
+
+.clima-detalles strong {
+    color: #f8fafc;
+    display: block;
+    margin-top: 4px;
+    font-size: 16px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

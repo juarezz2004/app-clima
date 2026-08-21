@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta del Clima</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>🌤️ Consulta el Clima</h1>
+        <p class="subtitle">Buscá el tiempo en cualquier ciudad del mundo</p>
+
+        <form method="POST" action="/" class="busqueda-form">
+            <input 
+                type="text" 
+                name="ciudad" 
+                placeholder="Ej: Buenos Aires, Madrid, Tokio..." 
+                value="{{ ciudad_buscada }}" 
+                required 
+                autofocus
+            >
+            <button type="submit">Buscar</button>
+        </form>
+
+        {% if error %}
+            <div class="error-msg">
+                ⚠️ {{ error }}
+            </div>
+        {% endif %}
+
+        {% if clima %}
+            <div class="clima-card">
+                <div class="clima-emoji">{{ clima.emoji }}</div>
+                <div class="clima-temp">{{ clima.temperatura }}°C</div>
+                <div class="clima-condicion">{{ clima.condicion }}</div>
+                <div class="clima-ubicacion">📍 {{ clima.ciudad }}, {{ clima.pais }}</div>
+                
+                <div class="clima-detalles">
+                    <div>
+                        <span>Viento</span>
+                        <strong>{{ clima.viento }} km/h</strong>
+                    </div>
+                </div>
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>
